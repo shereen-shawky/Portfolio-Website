@@ -138,53 +138,59 @@ export default function ProjectsSection() {
               viewport={{ once: true }}
             >
               <div className="relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-lg group">
-                {/* Project Image */}
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  width={500}
-                  height={300}
-                  className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-105"
-                />
+                {/* Image Wrapper with Overlay */}
+                <div className="relative">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={500}
+                    height={300}
+                    className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
 
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-purple-600/60 via-purple-600/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                  {/* Behance (UI/UX only) */}
-                  {project.category === 'UI/UX Design' && project.behance && (
-                    <a
-                      href={project.behance}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-white p-2 rounded-full hover:scale-110 transition-transform"
-                      title="View on Behance"
-                    >
-                      <FaBehance className="h-5 w-5 text-purple-700" />
-                    </a>
-                  )}
-
-                  {/* Live + GitHub (other categories) */}
-                  {project.category !== 'UI/UX Design' && (
-                    <>
+                  {/* Gradient Overlay on Hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-purple-600/60 via-purple-600/30 to-transparent 
+                    opacity-100 md:opacity-0 md:group-hover:opacity-100 
+                    transition-opacity duration-300 
+                    flex items-center justify-center gap-4">
+                    
+                    {/* Behance (UI/UX only) */}
+                    {project.category === 'UI/UX Design' && project.behance && (
                       <a
-                        href={project.live}
+                        href={project.behance}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="bg-white p-2 rounded-full hover:scale-110 transition-transform"
-                        title="View Live"
+                        title="View on Behance"
                       >
-                        <GlobeAltIcon className="h-5 w-5 text-purple-700" />
+                        <FaBehance className="h-5 w-5 text-purple-700" />
                       </a>
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-white p-2 rounded-full hover:scale-110 transition-transform"
-                        title="View Code on GitHub"
-                      >
-                        <FaGithub className="h-5 w-5 text-purple-700" />
-                      </a>
-                    </>
-                  )}
+                    )}
+
+                    {/* Live + GitHub (other categories) */}
+                    {project.category !== 'UI/UX Design' && (
+                      <>
+                        <a
+                          href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="bg-white p-2 rounded-full hover:scale-110 transition-transform"
+                          title="View Live"
+                        >
+                          <GlobeAltIcon className="h-5 w-5 text-purple-700" />
+                        </a>
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="bg-white p-2 rounded-full hover:scale-110 transition-transform"
+                          title="View Code on GitHub"
+                        >
+                          <FaGithub className="h-5 w-5 text-purple-700" />
+                        </a>
+                      </>
+                    )}
+                  </div>
                 </div>
 
                 {/* Content */}
@@ -193,6 +199,7 @@ export default function ProjectsSection() {
                   <p className="text-gray-600 dark:text-gray-300 mt-2 text-sm">{project.description}</p>
                 </div>
               </div>
+
             </motion.div>
           ))}
       </div>

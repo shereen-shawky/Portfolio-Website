@@ -17,7 +17,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className=" min-h-screen flex items-center justify-center bg-black p-8 text-white">
+    <section id="contact" className="mb-10 min-h-screen flex items-center justify-center bg-black p-8 text-white">
       <div className="max-w-7xl mx-auto">
         <motion.h2
           className="text-4xl font-bold text-center mb-2 text-purple-300"
