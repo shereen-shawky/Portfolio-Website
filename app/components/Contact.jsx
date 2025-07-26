@@ -69,17 +69,33 @@ export default function ContactSection() {
             </div>
 
             {/* Social Icons */}
-            <div className="flex gap-4 pt-4">
-              <a href="#" className="bg-purple-600 p-3 rounded-full hover:bg-purple-800">
-                <Github className="text-white" />
-              </a>
-              <a href="#" className="bg-purple-600 p-3 rounded-full hover:bg-purple-800">
-                <Linkedin className="text-white" />
-              </a>
-              <a href="#" className="bg-purple-600 p-3 rounded-full hover:bg-purple-800">
-                <ExternalLink className="text-white" />
-              </a>
-            </div>
+              <div className="flex gap-4 pt-4">
+                <a
+                  href="https://github.com/shereen-shawky"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-purple-600 p-3 rounded-full hover:bg-purple-800"
+                >
+                  <Github className="text-white" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/shereen-shawky/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-purple-600 p-3 rounded-full hover:bg-purple-800"
+                >
+                  <Linkedin className="text-white" />
+                </a>
+                <a
+                  href="https://portfolio-website-nine-rho-22.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-purple-600 p-3 rounded-full hover:bg-purple-800"
+                >
+                  <ExternalLink className="text-white" />
+                </a>
+              </div>
+
           </motion.div>
 
           {/* Contact Form */}
