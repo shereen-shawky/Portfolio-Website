@@ -37,17 +37,17 @@ const projects = [
     category: 'HTML/CSS/JS',
     title: 'Headphones Landing Page',
     description: 'Responsive headphones landing page with CSS animations.',
-    image: '/headphones.png',
+    image: '/headphones.PNG',
     github: 'https://github.com/shereen-shawky/CodeClause_Headphones_Landing-page',
-    live: 'https://yourdomain.com/portfolio',
+    live: '',
   },
   {
     category: 'HTML/CSS/JS',
     title: 'Coffee Shop Website',
     description: 'Responsive coffee shop site with CSS animations.',
-    image: '/coffee.png',
+    image: '/coffee.PNG',
     github: 'https://github.com/shereen-shawky/coffee-website-design',
-    live: 'https://yourdomain.com/weather-app',
+    live: '',
   },
 
   // Bootstrap
@@ -56,9 +56,9 @@ const projects = [
     category: 'Bootstrap',
     title: 'Kusina Website',
     description: 'Restaurant website with Bootstrap 5 and custom components.',
-    image: '/kusina.png',
+    image: '/kusina.PNG',
     github: 'https://github.com/shereen-shawky/Kusina-Website',
-    live: 'https://yourdomain.com/product-showcase',
+    live: '',
   },
 
   // React
@@ -74,17 +74,17 @@ const projects = [
     category: 'React Projects',
     title: 'Weather App',
     description: 'Fetch real-time weather data with React and OpenWeatherMap API.',
-    image: '/wheather.png',
+    image: '/wheather.PNG',
     github: 'https://github.com/shereen-shawky/Weather-app',
-    live: 'https://yourdomain.com/recipe-finder',
+    live: '',
   },
   {
     category: 'React Projects',
     title: 'Electronics ecommerce',
     description: 'Fetch real-time weather data with React and OpenWeatherMap API.',
-    image: '/electronics.png',
+    image: '/electronics.PNG',
     github: 'https://github.com/shereen-shawky/Ecommerce-Next.js-Strapi',
-    live: 'https://yourdomain.com/recipe-finder',
+    live: '',
   }
 
   // Vue.js
@@ -126,7 +126,7 @@ export default function ProjectsSection() {
       </div>
 
       {/* Projects Grid */}
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4">
         {projects
           .filter((p) => p.category === selected)
           .map((project, index) => (
