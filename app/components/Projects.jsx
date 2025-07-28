@@ -58,7 +58,7 @@ const projects = [
     description: 'Restaurant website with Bootstrap 5 and custom components.',
     image: '/kusina.PNG',
     github: 'https://github.com/shereen-shawky/Kusina-Website',
-    live: '',
+    live: 'https://kusin.netlify.app',
   },
 
   // React
@@ -84,7 +84,7 @@ const projects = [
     description: 'Fetch real-time weather data with React and OpenWeatherMap API.',
     image: '/electronics.PNG',
     github: 'https://github.com/shereen-shawky/Ecommerce-Next.js-Strapi',
-    live: '',
+    live: 'https://tech-deal-eta.vercel.app',
   }
 
   // Vue.js
